@@ -1,0 +1,18 @@
+<div tabindex="-1">
+    <div class="calculator">
+        <div class="card">
+            <div class="top">
+                <input type="text" disabled>
+            </div>
+            <div class="bottom">
+                <div class="allbtns">
+                    <div *ngFor="let data of allbuttons">
+                        <button class={{data.class}} (click)="buttonClick()" >{{data.value}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input autofocus type="text" #userName [(ngModel)]="data" hidden>
