@@ -12,7 +12,7 @@ var allbuttons = [
       "class": "orange"
     },
     {
-      "value": "AC",
+      "value": "<-",
       "class": "orange"
     },
     {

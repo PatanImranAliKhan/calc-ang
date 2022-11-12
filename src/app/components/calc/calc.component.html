@@ -2,12 +2,21 @@
     <div class="calculator">
         <div class="card">
             <div class="top">
-                <input type="text" disabled>
+                <p>
+                    {{data}}
+                </p>
             </div>
             <div class="bottom">
+                <div class="ansandback">
+                    <div  style="display: inline-flex;">
+                        <b>ans = &nbsp;&nbsp;&nbsp;</b>
+                        <span style="float: right;">{{ans}}</span>
+                    </div>
+                    <button class="orange">AC</button>
+                </div>
                 <div class="allbtns">
                     <div *ngFor="let data of allbuttons">
-                        <button class={{data.class}} (click)="buttonClick()" >{{data.value}}</button>
+                        <button class={{data.class}} (click)="buttonClick(data.value.toString())" >{{data.value}}</button>
                     </div>
                 </div>
             </div>
@@ -15,4 +24,4 @@
     </div>
 </div>
 
-<input autofocus type="text" #userName [(ngModel)]="data" hidden>
+<input autofocus type="text" #focusvalue [(ngModel)]="sample" style="width: 0px;height: 0px" (ngModelChange)="changeInput($event)">
