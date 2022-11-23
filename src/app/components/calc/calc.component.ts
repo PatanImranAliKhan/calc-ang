@@ -14,9 +14,13 @@ export class CalcComponent implements AfterViewInit {
   public data=""
   public ans="";
 
+  public enable=false;
+
   public sample="";
 
   public showInputField=true;
+
+  public _id: string="";
 
   @ViewChild('focusvalue') focusvalue: ElementRef = {} as ElementRef;
 
@@ -26,7 +30,15 @@ export class CalcComponent implements AfterViewInit {
   }
 
   ngOnInit(): void {
-
+    const iddet=JSON.parse(localStorage.getItem("idforcal") || "");
+    if(iddet==null || iddet=="" || iddet==undefined)
+    {
+      this._id="jwkcheukfvckevchegvcytef";
+    }
+    else
+    {
+      this._id=iddet[0].calcid;
+    }
   }
 
   buttonClick(selectinput: string)
@@ -46,6 +58,13 @@ export class CalcComponent implements AfterViewInit {
     console.log(newvalue[newvalue.length-1]);
     this.data+=newvalue[newvalue.length-1];
     this.ans=addData(newvalue[newvalue.length-1]);
+  }
+
+  EnableOrDisableConnectButton()
+  {
+    this.enable=!this.enable;
+    window.prompt("Provide ID to connect")
+    
   }
 
 }

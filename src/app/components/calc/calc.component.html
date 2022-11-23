@@ -1,4 +1,17 @@
 <div tabindex="-1">
+    <div class="topnavigation">
+        <div>&nbsp;
+        </div>
+        <div class="dispalyid">
+            <p><b>Id:</b> {{_id}}</p>
+        </div>
+        <div class="connectspan">
+            <span *ngIf="!enable" (click)="EnableOrDisableConnectButton()">Connect</span>
+            <!-- <div *ngIf="enable" class="connectinputbutton">
+                <input type="text" autofocus > &nbsp;&nbsp; <span> Connect</span>
+            </div> -->
+        </div>
+    </div>
     <div class="calculator">
         <div class="card">
             <div class="top">
@@ -7,12 +20,13 @@
                 </p>
             </div>
             <div class="bottom">
-                <div class="ansandback">
-                    <div  style="display: inline-flex;">
-                        <b>ans = &nbsp;&nbsp;&nbsp;</b>
+                <div class="ans">
+                    <p></p>
+                    <b>ans = &nbsp;&nbsp;&nbsp;</b>
+                    <div style="display: inline-flex;">
+                        <!-- <b>ans = &nbsp;&nbsp;&nbsp;</b> -->
                         <span style="float: right;">{{ans}}</span>
                     </div>
-                    <button class="orange">AC</button>
                 </div>
                 <div class="allbtns">
                     <div *ngFor="let data of allbuttons">

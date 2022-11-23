@@ -4,7 +4,7 @@
     min-width: 350px;
     height: auto;
     margin: auto;
-    margin-top: 75px;
+    margin-top: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 25px;
     padding: 10px 5px 50px 5px;
@@ -38,21 +38,23 @@
     border-radius: 5px;
 }
 
-.ansandback
+.ans
 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 3fr;
     margin-left: 5%;
+    align-items:center;
+    justify-content:center;
 }
 
-.ansandback span
+.ans span
 {
     height: 40px;
     border: 1px solid #000;
     background-color: #c2c2c2;
     border-radius: 8px;
     vertical-align: middle;
-    width: 100%;
+    width: 90%;
 }
 .ansandback b
 {
@@ -103,3 +105,93 @@ button:hover
     background-color: orange;
     font-size: 19px;
 }
+
+.nodisplay
+{
+    background-color: white;
+
+}
+
+.nodisplay:hover
+{
+    background-color: white;
+    border: none;
+    cursor: auto;
+}
+
+.topnavigation
+{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.dispalyid
+{
+    margin-top: 25px;
+}
+
+.connectspan
+{
+    margin-top: 25px;
+    margin-right: 20%;
+}
+
+.connectspan span
+{
+    padding: 8px 20px 8px 20px;
+    background-color: rgb(56, 102, 186);
+    color: #fff;
+    vertical-align: middle;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.connectinputbutton
+{
+    display: inline-flex;
+}
+
+.connectinputbutton input
+{
+    width: 250px;
+    height: 38px;
+}
+
+.connectinputbutton span
+{
+    margin-top: 0px;
+    color: #fff;
+    background-color: rgb(67, 175, 67);
+    padding: 8px 20px 8px 20px;
+}
+
+.connectinputbutton button:hover
+{
+    transform: scale(0);
+}
+
+@media screen and (max-width: 1500px) {
+    .calculator
+    {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        height: 85vh;
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    .connectspan
+    {
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .connectspan
+    {
+        margin-right: 5%;
+    }
+} */

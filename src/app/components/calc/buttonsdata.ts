@@ -1,10 +1,10 @@
 var allbuttons = [
     {
-      "value": "(",
-      "class": "orange"
+      "value": "",
+      "class": "nodisplay"
     },
     {
-      "value": ")",
+      "value": "AC",
       "class": "orange"
     },
     {
